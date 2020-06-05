@@ -9,7 +9,7 @@ import Logo from "../images/Logo.png"
 import close from "../images/close.png"
 import close_icon from "../images/close-Icon.png"
 import whiteLogo from "../images/white-logo.png"
-var url = '';
+var url = 'notification-hidden';
 var headButton = <><Link className="dark-bt nav-bt w-button" to="/wellness-test-cards">Pre-order</Link>
 <Link className="dark-bt nav-bt mobile w-button" to="/wellness-test-cards">Pre-order</Link></>;
 class Header extends React.Component {
