@@ -9,7 +9,8 @@ import Logo from "../images/Logo.png"
 import close from "../images/close.png"
 import close_icon from "../images/close-Icon.png"
 import whiteLogo from "../images/white-logo.png"
-var url = 'notification-hidden';
+var url = '';
+var topBar = 'notification-hidden';
 var headButton = <><Link className="dark-bt nav-bt w-button" to="/wellness-test-cards">Pre-order</Link>
 <Link className="dark-bt nav-bt mobile w-button" to="/wellness-test-cards">Pre-order</Link></>;
 class Header extends React.Component {
@@ -80,6 +81,12 @@ render() {
     headButton = <><Link className="dark-bt nav-bt w-button" to="/wellness-test-cards">Pre-order</Link>
     <Link className="dark-bt nav-bt mobile w-button" to="/wellness-test-cards">Pre-order</Link></>
   }
+  if ( path == '/') {
+    topBar = 'notification-bar-wrapper';
+  }
+  else {
+    topBar = 'notification-hidden';
+  }
 }
   return (
 <>
@@ -92,7 +99,7 @@ render() {
         url = (location.pathname);
       }}
     </Location>
-  <div className={url !== '/' ? `notification-hidden` : `notification-bar-wrapper`} id={url}>
+  <div className={topBar} id="very-top-bar">
     <div className="notification-bar">
       <div className="notification-bar-container w-container">
         <h4 className="annoucement">At-Home Coronavirus Test</h4>
