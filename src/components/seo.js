@@ -21,7 +21,6 @@ function SEO({ description, lang, meta, title, image, }) {
             author
             image
           }
-          host
         }
       }
     `
@@ -29,8 +28,6 @@ function SEO({ description, lang, meta, title, image, }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || site.siteMetadata.image
-  const domain = site.host;
-
   return (
     <Helmet
       htmlAttributes={{
@@ -57,7 +54,7 @@ function SEO({ description, lang, meta, title, image, }) {
         },
         {
           property: `og:image`,
-          content: "https://"+domain+metaImage,
+          content: "https://build-a4101adc-3e31-4b0a-8f42-eb33447ed3c7.gtsb.io/"+metaImage,
         },
         {
           name: `twitter:card`,
