@@ -81,12 +81,17 @@ render() {
     headButton = <><Link className="dark-bt nav-bt w-button" to="/wellness-test-cards">Pre-order</Link>
     <Link className="dark-bt nav-bt mobile w-button" to="/wellness-test-cards">Pre-order</Link></>
   }
-  if ( pathName === '') {
-    topBar = 'notification-bar-wrapper';
+  window.setTimeout(function(){ 
+    var home = window.location.pathname;
+  if ( home === '/') {
+    var homeTop = document.getElementsByClassName("notification-bar-wrapper");
+    homeTop[0].classList.add("showing")
   }
   else {
-    topBar = 'notification-hidden';
+    var homeTop = document.getElementsByClassName("notification-bar-wrapper");
+    homeTop[0].classList.add("hiding")
   }
+}, 500); 
 }
   return (
 <>
@@ -99,7 +104,7 @@ render() {
         url = (location.pathname);
       }}
     </Location>
-  <div className={topBar} id="very-top-bar">
+  <div className="notification-bar-wrapper" id="very-top-bar">
     <div className="notification-bar">
       <div className="notification-bar-container w-container">
         <h4 className="annoucement">At-Home Coronavirus Test</h4>

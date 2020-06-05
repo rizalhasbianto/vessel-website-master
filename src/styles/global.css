@@ -599,7 +599,7 @@ opacity: 0;
     letter-spacing: 0.31px;
     height: auto;
 }
-.notification-hidden {
+.notification-bar-wrapper.hiding {
   display:none!important;
 }
 /* NEW CORONA PAGE */
