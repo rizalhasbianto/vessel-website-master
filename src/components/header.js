@@ -15,6 +15,12 @@ var headButton = <><Link className="dark-bt nav-bt w-button" to="/wellness-test-
 <Link className="dark-bt nav-bt mobile w-button" to="/wellness-test-cards">Pre-order</Link></>;
 class Header extends React.Component {
   componentDidMount() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WWHSZQJ');
+
 	var lastScrollTop ='0'
     function handleScroll() {
 	    var st = window.pageYOffset || document.documentElement.scrollTop; 
@@ -99,6 +105,7 @@ render() {
         url = (location.pathname);
       }}
     </Location>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWHSZQJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div className={topBar} id="very-top-bar">
     <div className="notification-bar">
       <div className="notification-bar-container w-container">
