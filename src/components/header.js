@@ -92,7 +92,7 @@ render() {
         url = (location.pathname);
       }}
     </Location>
-  <div className={url == '/' ? `notification-bar-wrapper` : `notification-hidden`} id="very-top-bar">
+  <div className={url !== '/' ? `notification-hidden` : `notification-bar-wrapper`} id="very-top-bar">
     <div className="notification-bar">
       <div className="notification-bar-container w-container">
         <h4 className="annoucement">At-Home Coronavirus Test</h4>
