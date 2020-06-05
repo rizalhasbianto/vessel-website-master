@@ -105,7 +105,7 @@ render() {
         url = (location.pathname);
       }}
     </Location>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWHSZQJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWHSZQJ" height="0" width="0" ></iframe></noscript>
   <div className={topBar} id="very-top-bar">
     <div className="notification-bar">
       <div className="notification-bar-container w-container">
