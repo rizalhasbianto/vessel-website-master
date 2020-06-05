@@ -91,7 +91,7 @@ render() {
     var homeTop = document.getElementsByClassName("notification-bar-wrapper");
     homeTop[0].classList.add("hiding")
   }
-}, 500); 
+}, 200); 
 }
   return (
 <>
@@ -179,7 +179,7 @@ render() {
               </div>
             </div>
           </div>
-          <div data-w-id="f5ccf9f4-a3e9-20be-34c3-4c2e866f7754" className="div-block-117"></div>
+          <div data-w-id="f5ccf9f4-a3e9-20be-34c3-4c2e866f7754" onClick={this.handleClick} className="div-block-117"></div>
         </div>
       </div>
     </div>

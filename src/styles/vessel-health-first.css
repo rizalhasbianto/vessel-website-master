@@ -3515,7 +3515,7 @@ a {
 .text-wrap {
   position: relative;
   left: 218px;
-  top: -75px;
+  top: -77px;
   display: inline-block;
   width: 200px;
 }
@@ -11652,5 +11652,11 @@ a {
   font-family: 'Banana Grotesk Extra Light';
   src: url('../fonts/BananaGrotesk-Extralight.otf') format('opentype');
   font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NoeText Bold';
+  src: url('../fonts/NoeText-Bold.otf') format('opentype');
+  font-weight: bold;
   font-style: normal;
 }

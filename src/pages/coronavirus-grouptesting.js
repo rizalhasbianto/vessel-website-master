@@ -5,11 +5,11 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Footer from "../components/footer"
 
 import seo_image from "../images/coronavirus-grouptesting-og.jpg"
 import Logo from "../images/Logo.png"
 import close_Icon from "../images/close-Icon.png"
-import white_logo from "../images/white-logo.png"
 import Group_ from "../images/Group-7.png"
 import quote from "../images/quote.png"
 import drbrownstein from "../images/drbrownstein.png"
@@ -99,27 +99,27 @@ class coronaPage extends Component {
     window.addEventListener('scroll', handleScrollBody);
     
     // CONTACT FORM
-    window.setTimeout(function(){ 
-      document.getElementById("company-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Entity Name";
-      document.getElementById("firstname-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Your Name";
-      document.getElementById("job_function-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Your Role/Title";
-      document.getElementById("email-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Email";
-      document.getElementById("phone-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Phone";
-      document.getElementById("partner_request_form-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Anything else we should know?";
-      document.getElementById('entity_name-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML ='I represent a';
-      document.getElementById('country-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML = 'Location';
-      document.getElementById('test_type-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML = 'Test type';
-      document.getElementById('number_of_tests_needed-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML ='Number of tests needed';
-      document.getElementById('fulfillment_preference-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML ='Fulfillment type';
-      document.getElementById('referral_source-dabff0c2-494a-44b3-8330-1928f55fbe16').placeholder ='How did you hear about us?';
-    }, 1000);  
-    document.getElementById('contact_form').addEventListener('DOMNodeInserted', OnNodeInserted, false);
-    function OnNodeInserted () {
-      if (document.getElementById("contact_form").querySelectorAll(".submitted-message").length > 0) 
-        {
-      document.getElementsByClassName('sub-thank')[0].classList.add('submited');
-        }
-  }
+    //window.setTimeout(function(){ 
+    //  document.getElementById("company-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Entity Name";
+    //  document.getElementById("firstname-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Your Name";
+    //  document.getElementById("job_function-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Your Role/Title";
+    //  document.getElementById("email-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Email";
+    //  document.getElementById("phone-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Phone";
+    //  document.getElementById("partner_request_form-dabff0c2-494a-44b3-8330-1928f55fbe16").placeholder = "Anything else we should know?";
+    //  document.getElementById('entity_name-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML ='I represent a';
+    //  document.getElementById('country-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML = 'Location';
+    //  document.getElementById('test_type-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML = 'Test type';
+    //  document.getElementById('number_of_tests_needed-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML ='Number of tests needed';
+    //  document.getElementById('fulfillment_preference-dabff0c2-494a-44b3-8330-1928f55fbe16').firstChild.innerHTML ='Fulfillment type';
+    //  document.getElementById('referral_source-dabff0c2-494a-44b3-8330-1928f55fbe16').placeholder ='How did you hear about us?';
+    //}, 1000);  
+    //document.getElementById('contact_form').addEventListener('DOMNodeInserted', OnNodeInserted, false);
+    //function OnNodeInserted () {
+    //  if (document.getElementById("contact_form").querySelectorAll(".submitted-message").length > 0) 
+    //    {
+    //  document.getElementsByClassName('sub-thank')[0].classList.add('submited');
+    //    }
+  //}
   }
 	render() {
 	return (
@@ -442,34 +442,7 @@ class coronaPage extends Component {
   </div>
   <div id="data-policy" className="data-privacy covid">
     <div className="cream-bg covid business bottom"></div>
-    <div className="footer-content">
-      <div className="container-10 w-container">
-        <div className="div-block-36"><img src={white_logo} height="40" alt="" className="image-11"/></div>
-        <div className="div-block-35">
-          <div className="footer-text">Email: <a href="mailto:wegotyou@vesselhealth.com?subject=Vessel%20Health%20General%20Inquiry"><span className="footer-link">wegotyou@vesselhealth.com</span></a></div><a href="http://vesselhealth.zendesk.com/" target="_blank" className="footer-link">Help Center</a></div>
-        <div className="div-block-35">
-        <Link className="footer-link" to="/">Wellness Test Card</Link>
-        <Link className="footer-link" to="/coronavirus">Coronavirus Test Card</Link>
-        <Link className="footer-link" to="/coronavirus-grouptesting">Coronavirus Group Testing</Link>
-        <Link className="footer-link" to="/about">About</Link>
-        <Link className="footer-link" to="/careers">Careers</Link>
-        <Link className="footer-link" to="/partner">Partner</Link>
-        <Link className="footer-link press-f" to="#">Press</Link>
-        </div>
-      </div>
-      <div className="container-11 w-container">
-        <div className="div-block-36">
-          <h4 className="lab-child white last"><a href="https://www.instagram.com/vesselhealth/" target="_blank" className="link">Ig</a><em className="italic-text-2">/</em><a href="https://www.facebook.com/vesselhq" target="_blank" className="link">Fb</a><em className="italic-text-2">/</em><a href="http://twitter.com/wearevessel" target="_blank" className="link">Tw</a><em className="italic-text">/</em> <a href="https://www.youtube.com/channel/UCljstRPPpBCBwe_un2pU45w" target="_blank" className="link-2">Yt</a></h4>
-        </div>
-        <div className="div-block-37">
-          <div className="footer-text notice">2020 Vessel. All rights Reserved.</div>
-          <Link className="footer-link notice" to="/privacy-policy">Privacy Policy</Link>
-          <Link className="footer-link notice" to="/terms-of-service">Terms of Service</Link>
-          <div className="footer-text notice patent">Patent Pending</div>
-          <div className="footer-text notice disclaimer">* <strong>This product is intended only for maintaining and encouraging a healthy lifestyle and is unrelated to the diagnosis, cure, mitigation, prevention, or treatment of a disease or condition</strong>.  Designed by Vessel in California.</div>
-        </div>
-      </div>
-    </div>
+    <Footer />
   </div>
   </Layout>
   </>

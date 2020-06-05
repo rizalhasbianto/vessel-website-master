@@ -4,6 +4,8 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Footer from "../components/footer"
+
 import careers_top from "../images/careers-top.png"
 import team from "../images/team.png"
 import Vessel_website_launch_party from "../images/Vessel-website-launch-party.jpg"
@@ -16,15 +18,15 @@ import close from "../images/close.png"
 class coronaPage extends Component {
 	componentDidMount() {
 	// Accordion function
-    var accorParent = document.getElementsByClassName("div-block-97");
+    var accorParent = document.getElementsByClassName("accordion-trigger");
     for (var i = 0; i < accorParent.length; i++) {
       accorParent[i].addEventListener("click", function(e) {
         e.preventDefault()
-        if (this.classList.contains("w--active")) {
-          this.classList.remove("w--active");
+        if (this.parentElement.classList.contains("w--active")) {
+          this.parentElement.classList.remove("w--active");
         }
         else {
-          this.className += " w--active"; 
+          this.parentElement.className += " w--active"; 
         }
       });
 	}
@@ -105,7 +107,7 @@ class coronaPage extends Component {
         <div>
           <p className="paragraph">With every purchase made, Vessel will provide nutritional support to a child in need for an entire month through Vitamin Angels. We are proud to join them in the fight in lowering mortality rates and ending global malnutrition.</p>
         </div>
-        <div className="div-block-54 w-clearfix"><a data-w-id="9bdf64eb-4668-747b-3ecb-518e69e63825" href="#" className="dark-bt vit-ang w-button">Learn more</a><img src={vit_ang_ps} alt="" className="image-10"/></div>
+        <div className="div-block-54 w-clearfix"><Link to="#" className="dark-bt vit-ang w-button">Learn more</Link><img src={vit_ang_ps} alt="" className="image-10"/></div>
       </div>
     </div>
   </div>
@@ -120,7 +122,7 @@ class coronaPage extends Component {
               <p className="paragraph-18 number">01</p>
               <h3 className="heading-46">Biochemical Engineer, Production Readiness<br/></h3><img src={expand} alt="" className="expand-icon"/></div>
             <div className="p-qs w-clearfix">
-              <p className="paragraph">$75k – $110k • 0.01% – 1.0%<strong><br/>F</strong>ull-time<br/>&zwj;<br/>Pay will be partial salary | Partial equity, until Series A round closes<br/><br/>&zwj;<strong>Role &amp; Responsibilities:</strong><br/>-Biochemical process transfer from R&amp;D Lab to high volume Production<br/>-Collaboration with the Science team to optimize assays for highly consistent and accurate high volume manufacturing<br/>-Implementing and maintaining a set of processes and documentation that enables accurate and efficient transfer of all assays to manufacturing<br/><br/>&zwj;<strong>Mission/Purpose:</strong><br/>The person in this role is critical to ensuring that assays developed in R&amp;D will be quickly and easily moved from the lab to manufacturing environment to ensure rapid commercialization of new tests and chemistries.<br/><br/>&zwj;<strong>Needed Skills:</strong><br/>-Knowledge of Biochemistry and/or Bioengineering<br/>-Assay development and production<br/>-Develop effective and efficient process and documentation<br/>-Proactive collaboration with Science and Manufacturing<br/>-Creative problem solving<br/>-Clear, effective communication<br/>-Quality Control and Testing<br/>-Fast response times<br/>-Organization &amp; planning<br/>-Attention to details<br/><br/>&zwj;<strong>What technical knowledge do you need to perform in your role?</strong><br/>-Bioengineering, Biochemistry, chemical engineering or similar<br/>-Rapid assay development and manufacturing (Lateral flow, colorimetrics)<br/>-Lab processes and procedures<br/><br/>&zwj;<strong>Qualifications (Must haves):</strong><br/>-Experience in Assay development and testing<br/>-Experience with transferring assays to manufacturing<br/>-Investigation and resolution of manufacturing issues related to assay development<br/>-Clear communication and speaking skills<br/><br/>&zwj;<strong>Qualifications (Nice to haves):</strong><br/>-Managing a team of chemists, engineers<br/>-Quality control and process<br/>-Knowledge of FDA manufacturing requirements<br/>-Six-sigma, Lean or Black Belt training</p><a href="https://angel.co/company/vessel-tracker/jobs/772061-biochemical-engineer-production-readiness" target="_blank" className="dark-bt job w-button">Learn more</a></div>
+              <p className="paragraph">$75k – $110k • 0.01% – 1.0%<strong><br/>F</strong>ull-time<br/>&zwj;<br/>Pay will be partial salary | Partial equity, until Series A round closes<br/><br/>&zwj;<strong>Role &amp; Responsibilities:</strong><br/>-Biochemical process transfer from R&amp;D Lab to high volume Production<br/>-Collaboration with the Science team to optimize assays for highly consistent and accurate high volume manufacturing<br/>-Implementing and maintaining a set of processes and documentation that enables accurate and efficient transfer of all assays to manufacturing<br/><br/>&zwj;<strong>Mission/Purpose:</strong><br/>The person in this role is critical to ensuring that assays developed in R&amp;D will be quickly and easily moved from the lab to manufacturing environment to ensure rapid commercialization of new tests and chemistries.<br/><br/>&zwj;<strong>Needed Skills:</strong><br/>-Knowledge of Biochemistry and/or Bioengineering<br/>-Assay development and production<br/>-Develop effective and efficient process and documentation<br/>-Proactive collaboration with Science and Manufacturing<br/>-Creative problem solving<br/>-Clear, effective communication<br/>-Quality Control and Testing<br/>-Fast response times<br/>-Organization &amp; planning<br/>-Attention to details<br/><br/>&zwj;<strong>What technical knowledge do you need to perform in your role?</strong><br/>-Bioengineering, Biochemistry, chemical engineering or similar<br/>-Rapid assay development and manufacturing (Lateral flow, colorimetrics)<br/>-Lab processes and procedures<br/><br/>&zwj;<strong>Qualifications (Must haves):</strong><br/>-Experience in Assay development and testing<br/>-Experience with transferring assays to manufacturing<br/>-Investigation and resolution of manufacturing issues related to assay development<br/>-Clear communication and speaking skills<br/><br/>&zwj;<strong>Qualifications (Nice to haves):</strong><br/>-Managing a team of chemists, engineers<br/>-Quality control and process<br/>-Knowledge of FDA manufacturing requirements<br/>-Six-sigma, Lean or Black Belt training</p><Link to="https://angel.co/company/vessel-tracker/jobs/772061-biochemical-engineer-production-readiness" target="_blank" className="dark-bt job w-button">Learn more</Link></div>
           </div>
         </div>
         <div className="div-block-98">
@@ -186,34 +188,7 @@ class coronaPage extends Component {
         <h2 className="white heading">Your best is yet to come</h2>
         <p className="paragraph white">Coming summer 2020.</p><Link to="/wellness-test-cards" className="dark-bt white w-button">Pre-order</Link></div>
     </div>
-    <div className="footer-content">
-      <div className="container-10 w-container">
-        <div className="div-block-36"><img src={white_logo} height="40" alt="" className="image-11"/></div>
-        <div className="div-block-35">
-          <div className="footer-text">Email: <a href="mailto:wegotyou@vesselhealth.com?subject=Vessel%20Health%20General%20Inquiry"><span className="footer-link">wegotyou@vesselhealth.com</span></a></div><a href="http://vesselhealth.zendesk.com/" target="_blank" className="footer-link">Help Center</a></div>
-        <div className="div-block-35">
-        <Link className="footer-link" to="/">Wellness Test Card</Link>
-        <Link className="footer-link" to="/coronavirus">Coronavirus Test Card</Link>
-        <Link className="footer-link" to="/coronavirus-grouptesting">Coronavirus Group Testing</Link>
-        <Link className="footer-link" to="/about">About</Link>
-        <Link className="footer-link" to="/careers">Careers</Link>
-        <Link className="footer-link" to="/partner">Partner</Link>
-        <Link className="footer-link press-f" to="#">Press</Link>
-        </div>
-      </div>
-      <div className="container-11 w-container">
-        <div className="div-block-36">
-          <h4 className="lab-child white last"><a href="https://www.instagram.com/vesselhealth/" target="_blank" className="link">Ig</a><em className="italic-text-2">/</em><a href="https://www.facebook.com/vesselhq" target="_blank" className="link">Fb</a><em className="italic-text-2">/</em><a href="http://twitter.com/wearevessel" target="_blank" className="link">Tw</a><em className="italic-text">/</em>&nbsp;<a href="https://www.youtube.com/channel/UCljstRPPpBCBwe_un2pU45w" target="_blank" className="link-2">Yt</a></h4>
-        </div>
-        <div className="div-block-37">
-          <div className="footer-text notice">2020 Vessel. All rights Reserved.</div>
-          <Link className="footer-link notice" to="/privacy-policy">Privacy Policy</Link>
-          <Link className="footer-link notice" to="/terms-of-service">Terms of Service</Link>
-          <div className="footer-text notice patent">Patent Pending</div>
-          <div className="footer-text notice disclaimer">* <strong>This product is intended only for maintaining and encouraging a healthy lifestyle and is unrelated to the diagnosis, cure, mitigation, prevention, or treatment of a disease or condition</strong>. &nbsp;Designed by Vessel in California.</div>
-        </div>
-      </div>
-    </div>
+    <Footer />
   </div>
 
   </div>

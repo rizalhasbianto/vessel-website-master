@@ -16,6 +16,9 @@
   .sticky {
     position:sticky!important;
   }
+  .paragraph strong {
+    font-family: 'NoeText Bold', sans-serif;
+  }
   :focus {
 	outline: none;
   }
@@ -73,9 +76,11 @@
       padding-right: 30px;
       max-width: 240px;
   }
-  .text-wrap.group-covid {
+  body .text-wrap.group-covid {
     display: block;
     left: -4px;
+    top: -34px;
+    height: auto;
   }
   }
   @media only screen and (max-width: 450px) {
@@ -599,8 +604,20 @@ opacity: 0;
     letter-spacing: 0.31px;
     height: auto;
 }
+.notification-bar-wrapper {
+  display:none;
+}
 .notification-bar-wrapper.hiding {
   display:none!important;
+}
+.notification-bar-wrapper.showing {
+  display:block;
+}
+.text-wrap.group-covid {
+  left: 0;
+  top: 0;
+  display: block;
+  height: 30px;
 }
 /* NEW CORONA PAGE */
 .checkmark {
